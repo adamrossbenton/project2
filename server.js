@@ -9,7 +9,7 @@ const mongoose = require("mongoose")
 const app = express()
 
 ////////////////////////////////////////
-// DATABASE
+// DATABASE - (in Connection model)
 ////////////////////////////////////////
 
 const MONGODB_URI = process.env.MONGODB_URI
