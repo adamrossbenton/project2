@@ -80,6 +80,9 @@ app.get("/", (req,res) => {
 // Index
 app.get("/restaurants", (req,res) => {
     res.send("Restaurants are cool")
+    Rest.find({}, (err,rests) => {
+        res.render("rest/index.ejs")
+    })
 })
 
 // New
