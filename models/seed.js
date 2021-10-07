@@ -17,7 +17,9 @@ mongoose.connection.on("open", () => {
 
     Rest.deleteMany({}, (err,data) => {
         Rest.create(startRest, (err,data) => {
-            res.json(data)
+            console.log("----------RESTAURANTS CREATED----------")
+            console.log(data)
+            console.log("----------RESTAURANTS CREATED----------")
             mongoose.connection.close()
         })
     })
