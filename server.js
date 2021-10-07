@@ -29,7 +29,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(methodOverride("_method"))
 app.use(morgan("tiny"))
 app.use("/restaurants", RestRouter)
-app.use("/user", UserRouter)
+// app.use("/user", UserRouter)
 app.use(session({
     secret: process.env.SECRET,
     store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
