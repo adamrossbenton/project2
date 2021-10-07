@@ -1,27 +1,23 @@
 ////////////////////////////////////////////////
 // Dependencies
 ////////////////////////////////////////////////
+const { models } = require("./connection")
 const mongoose = require("./connection")
 
 ////////////////////////////////////////////////
-// Model
+// Models
 ////////////////////////////////////////////////
 const {Schema, model} = mongoose
 
-const restSchema = new Schema({
-    restName: {type: String, required: true},
-    restCity: {type: String, required: true},
-    restCuisine: String,
-    restOpenHours: String,
-    restHappsHours: String,
-    restHappsDeals: String,
-    restCreator: String,
-    restRating: Number,
+const dealSchema = new Schema({
+    dealName: String,
+    dealPrice: Number,
+    dealDesc: String,
 })
 
-const Rest = model("Rest",restSchema)
+const Deal = model("Deal", dealSchema)
 
 ////////////////////////////////////////////////
 // Exports
 ////////////////////////////////////////////////
-module.exports = Rest
+module.exports = Deal

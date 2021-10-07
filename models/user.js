@@ -1,0 +1,26 @@
+////////////////////////////////////////////////
+// Dependencies
+////////////////////////////////////////////////
+const mongoose = require("./connection")
+
+////////////////////////////////////////////////
+// Model
+////////////////////////////////////////////////
+
+const {Schema, model} = mongoose
+
+const userSchema = new Schema({
+    username: {type: String, required: true, unique: true},
+    password: {type: String, required: true},
+    homeCity: String,
+    favCuisine: String,
+    numPosts: Number,
+    voteScore: Number
+})
+
+const User = model("User",userSchema)
+
+////////////////////////////////////////////////
+// Exports
+////////////////////////////////////////////////
+module.exports = User
