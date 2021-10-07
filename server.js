@@ -5,29 +5,20 @@ require("dotenv").config()
 const express = require("express")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
-const mongoose = require("mongoose")
+const RestRouter = require("./controllers/rest")
+const UserRouter = require("./controllers/user")
+const session = require("express-session")
+const MongoStore = require("connect-mongo")
+
+////////////////////////////////////////
+// App
+////////////////////////////////////////
+
 const app = express()
 
 ////////////////////////////////////////
 // DATABASE - (in Connection model)
 ////////////////////////////////////////
-
-const MONGODB_URI = process.env.MONGODB_URI
-const CONFIG = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}
-mongoose.connect(MONGODB_URI, CONFIG)
-
-mongoose.connection
-    .on("error", (err) => console.log(err.message))
-    .on("connected",() => console.log("Connected"))
-    .on("disconnected",() => console.log("Disconnected"))
-
-////////////////////////////////////////
-// Models
-////////////////////////////////////////
-
 
 ////////////////////////////////////////
 // MIDDLEWARE
@@ -35,9 +26,16 @@ mongoose.connection
 
 app.use(express.static("public"))
 app.use(express.urlencoded({extended: false}))
-app.use(express.json())
 app.use(methodOverride("_method"))
 app.use(morgan("tiny"))
+app.use("/restaurants", RestRouter)
+app.use("/user", UserRouter)
+app.use(session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
+    SaveUnitialized: true,
+    resave: false
+}))
 
 ////////////////////////////////////////
 // ROUTES
@@ -46,8 +44,6 @@ app.use(morgan("tiny"))
 app.get("/", (req,res) => {
     res.send("Hello world")
 })
-
-// Seed
 
 // Index
 app.get("/restaurants", (req,res) => {
