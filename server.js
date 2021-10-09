@@ -10,6 +10,7 @@ const UserRouter = require("./controllers/user")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
 const Rest = require("./models/rest")
+const Deal = require("./models/deal")
 
 ////////////////////////////////////////
 // App

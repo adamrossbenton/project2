@@ -6,18 +6,19 @@
     <div class="show" id="top-container">
         <div class="show" id="title-city-hours">
             <div class="show" id="rest-name-city">
-                <h3>Restaurant Name</h3>
-                <h3>Restaurant City</h3>
+                <h3><%= rest.restName %> </h3>
+                <h3><%= rest.restCity %> </h3>
             </div>
             <div class="show" id="rest-hours">
-                <h3>Business Hours</h3>
-                <h3>Happy Hour</h3>
+                <h3><%= rest.restOpenHours %> </h3>
+                <h3><%= rest.restHappsHours %> </h3>
             </div>
         </div>
         <div class="show" id="contents">
-            <h3>Restaurant Type</h3>
+            <h3><%= rest.restCuisine %> </h3>
             <div class="show" id="hh-deals">
                 <h3>HH Deals:</h3>
+<!-- Will need to generate this for each deal -->
                 <div class="show" id="deal-container">
                     <h5>Line Item Name</h5>
                     <div class="show" id="deal-info">
