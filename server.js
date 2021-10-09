@@ -38,7 +38,7 @@ app.use(session({
 ////////////////////////////////////////
 // Home
 app.get("/", (req,res) => {
-    res.send("Hello world")
+    res.render("index.ejs")
 })
 
 ////////////////////////////////////////

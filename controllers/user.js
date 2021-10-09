@@ -19,8 +19,11 @@ router.get("/signup", (req,res) => {
     res.render("user/signup.ejs")
 })
 
-router.post("/signup", (req,res) => {
-    res.send("signup")
+router.post("/signup", async (req,res) => {
+    req.body.password = await bcrypt.hash(req.body.password, await bcrypt.genSalt(10))
+    User.create(req.body, (err,user) => {
+        res.redirect("/restaurants")
+    })
 })
 
 // Login
@@ -29,7 +32,20 @@ router.get("/login", (req,res) => {
 })
 
 router.post("/login", (req,res) => {
-    res.send("login")
+    const {username, password} = req.body
+    User.findOne({username}, (err, user) => {
+        if (!user) {
+            res.send("User does not exist")
+        } else {
+            if (result) {
+                req.session.loggedIn = true
+                req.session.username = username
+                res.redirect("/restaurants")
+            } else {
+                res.send("Incorrect password")
+            }
+        }
+    })
 })
 
 ////////////////////////////////////////////////
