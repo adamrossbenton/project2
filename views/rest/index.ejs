@@ -6,12 +6,14 @@
     <div class="index" id="search-container"></div>
         <h1>Search stuff goes here</h1>
     </div>
+    <% for (rest of rests) { %> 
     <div class="index" id="line-container">
         <div class="index" id="line-info">
-            <h1>Restaurant Name</h1>
-            <h4>Restaurant Address</h4>
-            <h4>HH Time</h4>
+            <a href="/restaurants/<%= rest._id %> "><%= rest.restName %> </a><br>
+            <h3><%= rest.restCity %> </h3>
+            <h3><%= rest.restHappsHours %> </h3>
         </div>
     </div>
+    <% } %> 
 </body>
 </html>

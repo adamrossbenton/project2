@@ -49,7 +49,7 @@ app.get("/", (req,res) => {
 // Index
 app.get("/restaurants", (req,res) => {
     Rest.find({}, (err,rests) => {
-        res.render("rest/index.ejs")
+        res.render("rest/index.ejs", {rests})
     })
 })
 
