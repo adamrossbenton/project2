@@ -1,1 +1,17 @@
-it's dat new new
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %> 
+<body>
+    <%- include("../partials/header.ejs") %>
+    <h1>Add New Restaurant:</h1>
+    <form action="/restaurants" method="POST">
+        <input type="text" name="restName" placeholder="Name"><br>
+        <input type="text" name="restCity" placeholder="City"><br>
+        <input type="text" name="restCuisine" placeholder="Cuisine"><br>
+        <input type="text" name="restOpenHours" placeholder="Open Hours"><br>
+        <input type="text" name="restHappsHours" placeholder="Happy Hours"><br>
+        <input type="text" name="restHappsDeals" placeholder="Happy Hour Deals"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

@@ -55,12 +55,16 @@ app.get("/restaurants", (req,res) => {
 })
 
 // New
+app.get("/restaurants/new", (req,res) => {
+    res.render("rest/new.ejs")
+})
 
 // Destroy
 
 // Update
 
 // Create
+
 
 // Edit
 
