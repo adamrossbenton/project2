@@ -64,7 +64,11 @@ app.get("/restaurants/new", (req,res) => {
 // Update
 
 // Create
-
+app.post("/restaurants", (req,res) => {
+    Rest.create(req.body, (err,rest) => {
+        res.redirect("/restaurants")
+    })
+})
 
 // Edit
 
