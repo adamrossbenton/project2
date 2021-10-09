@@ -9,6 +9,7 @@ const RestRouter = require("./controllers/rest")
 const UserRouter = require("./controllers/user")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
+const Rest = require("./models/rest")
 
 ////////////////////////////////////////
 // App
@@ -33,7 +34,7 @@ app.use("/restaurants", RestRouter)
 app.use(session({
     secret: process.env.SECRET,
     store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
-    SaveUnitialized: true,
+    saveUninitialized: true,
     resave: false
 }))
 
@@ -65,9 +66,9 @@ app.get("/restaurants", (req,res) => {
 // Show
 app.get("/restaurants/:id", (req,res) => {
     const id = req.params.id
-    // Rest.findById(id,(err,rest) => {
-    //     res.render("rest/show.ejs", {rest})
-    // })
+    Rest.findById(id,(err,rest) => {
+        res.render("rest/show.ejs", {rest})
+    })
 })
 
 ////////////////////////////////////////
