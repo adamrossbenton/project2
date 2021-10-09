@@ -34,6 +34,9 @@
             </div>
         </div>
         <a href="/restaurants/<%= rest._id %>/edit"><button>Edit</button></a>
+        <form action="/restaurants/<%= rest._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Remove">
+        </form>
         <a href="/restaurants"><button>Back to Main</button></a>
     </div> 
 </body>

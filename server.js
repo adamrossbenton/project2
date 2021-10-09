@@ -60,6 +60,12 @@ app.get("/restaurants/new", (req,res) => {
 })
 
 // Destroy
+app.delete("/restaurants/:id", (req,res) => {
+    const id = req.params.id
+    Rest.findByIdAndRemove(id, (err,rest) => {
+        res.redirect("/restaurants")
+    })
+})
 
 // Update
 app.put("/restaurants/:id", (req,res) => {
