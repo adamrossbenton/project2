@@ -11,6 +11,7 @@ const session = require("express-session")
 const MongoStore = require("connect-mongo")
 const Rest = require("./models/rest")
 const Deal = require("./models/deal")
+const User = require("./models/user")
 
 ////////////////////////////////////////
 // App
@@ -45,57 +46,6 @@ app.use(session({
 // Home
 app.get("/", (req,res) => {
     res.send("Hello world")
-})
-
-// Index
-app.get("/restaurants", (req,res) => {
-    Rest.find({}, (err,rests) => {
-        res.render("rest/index.ejs", {rests})
-    })
-})
-
-// New
-app.get("/restaurants/new", (req,res) => {
-    res.render("rest/new.ejs")
-})
-
-// Destroy
-app.delete("/restaurants/:id", (req,res) => {
-    const id = req.params.id
-    Rest.findByIdAndRemove(id, (err,rest) => {
-        res.redirect("/restaurants")
-    })
-})
-
-// Update
-app.put("/restaurants/:id", (req,res) => {
-    const id = req.params.id
-    Rest.findByIdAndUpdate(id, req.body, {new: true}, (err,rest) => {
-        res.redirect("/restaurants")
-    })
-})
-
-// Create
-app.post("/restaurants", (req,res) => {
-    Rest.create(req.body, (err,rest) => {
-        res.redirect("/restaurants")
-    })
-})
-
-// Edit
-app.get("/restaurants/:id/edit", (req,res) => {
-    const id = req.params.id
-    Rest.findById(id, (err,rest) => {
-        res.render("rest/edit.ejs", {rest})
-    })
-})
-
-// Show
-app.get("/restaurants/:id", (req,res) => {
-    const id = req.params.id
-    Rest.findById(id,(err,rest) => {
-        res.render("rest/show.ejs", {rest})
-    })
 })
 
 ////////////////////////////////////////
