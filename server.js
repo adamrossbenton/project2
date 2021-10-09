@@ -62,6 +62,12 @@ app.get("/restaurants/new", (req,res) => {
 // Destroy
 
 // Update
+app.put("/restaurants/:id", (req,res) => {
+    const id = req.params.id
+    Rest.findByIdAndUpdate(id, req.body, {new: true}, (err,rest) => {
+        res.redirect("/restaurants")
+    })
+})
 
 // Create
 app.post("/restaurants", (req,res) => {
