@@ -1,0 +1,7 @@
+<header>
+    <% if req.session.loggedIn { %>
+        require("/logout.ejs")
+    <% } else { %>
+        require("/login.ejs")
+    <% } %> 
+</header>
