@@ -9,10 +9,6 @@ const RestRouter = require("./controllers/rest")
 const UserRouter = require("./controllers/user")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
-// vv I think I can remove these vv
-// const Rest = require("./models/rest")
-// const Deal = require("./models/deal")
-// const User = require("./models/user")
 
 ////////////////////////////////////////
 // App
@@ -25,11 +21,11 @@ const app = express()
 ////////////////////////////////////////
 
 app.use(express.static("public"))
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"))
 app.use(morgan("tiny"))
 app.use("/restaurants", RestRouter)
-// app.use("/user", UserRouter)
+app.use("/user", UserRouter)
 app.use(session({
     secret: process.env.SECRET,
     store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),

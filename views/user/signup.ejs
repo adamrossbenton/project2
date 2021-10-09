@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %> 
+<body>
+    <%- include("../partials/headernologin.ejs") %>
+    <div class="signup" id="top-container">
+        <form action="/user/signup" method="POST">
+            <input type="text" name="username" placeholder="Username"><br>
+            <input type="text" name="password" placeholder="Password"><br>
+            <input type="text" name="homeCity" placeholder="Where do you live?"><br>
+            <input type="text" name="favCuisine" placeholder="Favorite kind of food?"><br>
+            <input type="submit" value="Welcome to Halfprice!">
+        </form>
+    </div> 
+</body>
+</html>
