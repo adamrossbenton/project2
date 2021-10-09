@@ -71,6 +71,12 @@ app.post("/restaurants", (req,res) => {
 })
 
 // Edit
+app.get("/restaurants/:id/edit", (req,res) => {
+    const id = req.params.id
+    Rest.findById(id, (err,rest) => {
+        res.render("rest/edit.ejs", {rest})
+    })
+})
 
 // Show
 app.get("/restaurants/:id", (req,res) => {
