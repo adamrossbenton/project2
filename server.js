@@ -9,19 +9,16 @@ const RestRouter = require("./controllers/rest")
 const UserRouter = require("./controllers/user")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
-const Rest = require("./models/rest")
-const Deal = require("./models/deal")
-const User = require("./models/user")
+// vv I think I can remove these vv
+// const Rest = require("./models/rest")
+// const Deal = require("./models/deal")
+// const User = require("./models/user")
 
 ////////////////////////////////////////
 // App
 ////////////////////////////////////////
 
 const app = express()
-
-////////////////////////////////////////
-// DATABASE - (in Connection model)
-////////////////////////////////////////
 
 ////////////////////////////////////////
 // MIDDLEWARE
