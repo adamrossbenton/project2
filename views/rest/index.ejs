@@ -3,13 +3,13 @@
 <%- include("../partials/head.ejs") %> 
 <body>
     <%- include("../partials/header.ejs") %> 
-    <div class="index" id="search-container"></div>
-        <h1>Search stuff goes here</h1>
+    <div class="index" id="search-container">
+        <!-- This is where search box will go -->
     </div>
     <% for (rest of rests) { %> 
     <div class="index" id="line-container">
         <div class="index" id="line-info">
-            <a href="/restaurants/<%= rest._id %> "><%= rest.restName %> </a><br>
+            <a class="index" id="line-link" href="/restaurants/<%= rest._id %> "><%= rest.restName %> </a><br>
             <h3><%= rest.restCity %> </h3>
             <h3><%= rest.restHappsHours %> </h3>
         </div>
