@@ -37,6 +37,7 @@ router.post("/login", (req,res) => {
         if (!user) {
             res.send("User does not exist")
         } else {
+            const result = bcrypt.compareSync(password, user.password)
             if (result) {
                 req.session.loggedIn = true
                 req.session.username = username
@@ -45,6 +46,13 @@ router.post("/login", (req,res) => {
                 res.send("Incorrect password")
             }
         }
+    })
+})
+
+// Logout
+router.get("/logout", (req,res) => {
+    req.session.destroy((err) => {
+        res.redirect("/")
     })
 })
 

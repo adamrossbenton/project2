@@ -10,6 +10,21 @@ const Rest = require("../models/rest")
 const router = express.Router()
 
 ////////////////////////////////////////////////
+// Router Middleware
+////////////////////////////////////////////////
+
+// Auth Middleware
+// I don't think I want this, maybe just for create?
+// router.use((req,res,next) => {
+//     if (req.session.loggedIn) {
+//         next()
+//     } else {
+//         res.redirect("/user/login")
+//     }
+// })
+
+
+////////////////////////////////////////////////
 // Routes
 ////////////////////////////////////////////////
 
