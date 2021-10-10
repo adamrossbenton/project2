@@ -17,6 +17,7 @@ const restSchema = new Schema({
     restHappsDeals: String,
     restCreator: String,
     restRating: Number,
+    restImgUrl: String,
 })
 
 const Rest = model("Rest",restSchema)
