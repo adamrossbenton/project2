@@ -37,14 +37,14 @@ router.get("/", (req,res) => {
 
 // New
 router.get("/new", (req,res) => {
-    res.render("rest/new.ejs")
+    res.render("rest/new.ejs", {loggedIn: req.session.loggedIn})
 })
 
 // Destroy
 router.delete("/:id", (req,res) => {
     const id = req.params.id
     Rest.findByIdAndRemove(id, (err,rest) => {
-        res.redirect("/restaurants")
+        res.redirect("/restaurants", {loggedIn: req.session.loggedIn})
     })
 })
 
@@ -52,14 +52,14 @@ router.delete("/:id", (req,res) => {
 router.put("/:id", (req,res) => {
     const id = req.params.id
     Rest.findByIdAndUpdate(id, req.body, {new: true}, (err,rest) => {
-        res.redirect("/restaurants")
+        res.redirect("/restaurants", {loggedIn: req.session.loggedIn})
     })
 })
 
 // Create
 router.post("/", (req,res) => {
     Rest.create(req.body, (err,rest) => {
-        res.redirect("/restaurants")
+        res.redirect("/restaurants", {loggedIn: req.session.loggedIn})
     })
 })
 
@@ -67,7 +67,7 @@ router.post("/", (req,res) => {
 router.get("/:id/edit", (req,res) => {
     const id = req.params.id
     Rest.findById(id, (err,rest) => {
-        res.render("rest/edit.ejs", {rest})
+        res.render("rest/edit.ejs", {rest, loggedIn: req.session.loggedIn})
     })
 })
 
@@ -75,7 +75,7 @@ router.get("/:id/edit", (req,res) => {
 router.get("/:id", (req,res) => {
     const id = req.params.id
     Rest.findById(id,(err,rest) => {
-        res.render("rest/show.ejs", {rest})
+        res.render("rest/show.ejs", {rest, loggedIn: req.session.loggedIn})
     })
 })
 
