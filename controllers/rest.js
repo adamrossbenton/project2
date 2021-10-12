@@ -59,7 +59,7 @@ router.put("/:id", (req,res) => {
 // Create
 router.post("/", (req,res) => {
     Rest.create(req.body, (err,rest) => {
-        res.redirect("/restaurants", {loggedIn: req.session.loggedIn})
+        res.redirect("/restaurants")
     })
 })
 
