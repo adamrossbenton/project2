@@ -1,8 +1,4 @@
 <header>
 <!-- Figure out how to tell if logged in -->
-<% if (req.session.loggedIn) { %>     
-    <%- include("./logout.ejs") %>
-<% } else { %>
     <%- include("./login.ejs") %>     
-<% } %> 
 </header>
