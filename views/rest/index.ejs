@@ -7,13 +7,14 @@
         <!-- This is where search box will go -->
     </div>
     <% for (rest of rests) { %> 
-    <div class="index" id="line-container" style="background: url(<%= rest.restImgUrl %>)">
+    <div class="index" id="line-container" style="background-image: url(<%= rest.restImgUrl %>); background-size: cover">
         <div class="index" id="line-info">
             <a class="index" id="line-link" href="/restaurants/<%= rest._id %> "><%= rest.restName %> </a><br>
             <h3><%= rest.restCity %> </h3>
             <h3><%= rest.restHappsHours %> </h3>
         </div>
-        <div class="index" id="line-photo-container">
+        <div class="index" id="line-photo-container" style="visibility: hidden">
+            <img src="<%= rest.restImgUrl %> ">
         </div>
     </div>
     <% } %> 
