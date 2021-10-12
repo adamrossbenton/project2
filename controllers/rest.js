@@ -31,7 +31,7 @@ const router = express.Router()
 // Index
 router.get("/", (req,res) => {
     Rest.find({}, (err,rests) => {
-        res.render("rest/index.ejs", {rests})
+        res.render("rest/index.ejs", {rests, loggedIn: req.session.loggedIn})
     })
 })
 

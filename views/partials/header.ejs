@@ -1,4 +1,7 @@
 <header>
-<!-- Figure out how to tell if logged in -->
-    <%- include("./login.ejs") %>     
+<% if (loggedIn) { %> 
+    <%- include("./logout.ejs") %>
+<% } else { %>
+    <%- include("./login.ejs") %>
+<% } %>        
 </header>

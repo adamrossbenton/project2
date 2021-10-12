@@ -5,8 +5,8 @@ body {
 /* PARTIALS */
 /* Login */
 
-/* Logout */
-.logout#header-container{
+/* Login/Logout */
+#header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,6 +17,10 @@ body {
     color: whitesmoke;
     margin: 0px 0px 25px 0px;
 }
+
+/* Login */
+
+/* Logout */
 
 .index#line-link {
     font-size: 32px;
