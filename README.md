@@ -15,11 +15,15 @@ Authorized users submit their favorite happy hour spots (via our super handy sub
 
 FEATURES:
 
-* 
+* View all currently submitted restaurants in our database and find your new favorite happy hour spot!
+* Take a look at one of the many restaurants and view some more specific details
 
 COMING SOON:
 
-* 
+* Search for awesome new spots based on your location
+* Search for awesome new spots based on your favorite kind of food
+* Voice your opinion using the upvote or downvote buttons for a specific restaurant
+* Users can leave fun anecdotes/stores of things that have happened at their favorite spots
 
 TECHNOLOGIES USED:
 
