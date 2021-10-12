@@ -36,4 +36,4 @@ TECHNOLOGIES USED:
 
 Some challehges I faced during the coding process:
 
-* 
+* I have no idea why my mobile view is for ants
