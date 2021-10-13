@@ -17,13 +17,17 @@ FEATURES:
 
 * View all currently submitted restaurants in our database and find your new favorite happy hour spot!
 * Take a look at one of the many restaurants and view some more specific details
+* Sign up for an account in order to add, edit, and delete restaurants
 
 COMING SOON:
 
-* Search for awesome new spots based on your location
+* Search for awesome new spots based on your location (city coordinates will be stored using GeoJSON)
 * Search for awesome new spots based on your favorite kind of food
+* Search for awesome new spots based on their happy hour time
+* Search for awesome new spots based on two or more of the above parameters
 * Voice your opinion using the upvote or downvote buttons for a specific restaurant
 * Users can leave fun anecdotes/stores of things that have happened at their favorite spots
+* Newly-created restaurants will be tied to their creator, and edit/delete permissions for that restaurant page will be restricted to that user only
 
 TECHNOLOGIES USED:
 
@@ -33,9 +37,10 @@ TECHNOLOGIES USED:
 * ExpressJS
 * MongoDB
 * Mongoose
+* Heroku
 
 Some challenges I faced during the coding process:
 
 * I had a lot of traveling/family events over the past week, was sometimes difficult to make time to work on the app
 * I have no idea why my mobile view is for ants
-* Adding images appears to ignore styling rules for those images, will fix later
+* Adding images appears to ignore styling rules for those images
