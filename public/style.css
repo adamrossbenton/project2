@@ -68,8 +68,8 @@ body {
 
 /* WHY DOES THIS MAKE MY MOBILE TINY I THOUGHT I MEDIA QUERIED IT WTF */
     .index#line-photo {
-        max-height: 450px;
-        max-width: 450px;
+        max-height: 400px;
+        max-width: 400px;
         overflow: hidden;
         object-fit: contain;
         border-radius: 25px;
