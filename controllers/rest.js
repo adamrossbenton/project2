@@ -44,7 +44,7 @@ router.get("/new", (req,res) => {
 router.delete("/:id", (req,res) => {
     const id = req.params.id
     Rest.findByIdAndRemove(id, (err,rest) => {
-        res.redirect("/restaurants", {loggedIn: req.session.loggedIn})
+        res.redirect("/restaurants")
     })
 })
 
@@ -52,7 +52,7 @@ router.delete("/:id", (req,res) => {
 router.put("/:id", (req,res) => {
     const id = req.params.id
     Rest.findByIdAndUpdate(id, req.body, {new: true}, (err,rest) => {
-        res.redirect("/restaurants", {loggedIn: req.session.loggedIn})
+        res.redirect("/restaurants")
     })
 })
 
