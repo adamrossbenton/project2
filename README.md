@@ -4,7 +4,7 @@ HALFPRICE
 
 Days are long, paychecks are short. Halfprice.
 
-Link:
+Link: https://halfpriceapp.herokuapp.com/
 
 So it's 5:00 on a Thursday. You're leaving the office of your underpaid job after a long day of getting chewed out by your overpaid boss. You're too hungry, too sober, and too full of existential angst and ennui.  
 And then your coworker invites you to this cool new place for drinks that they found on Halfprice. And that dark grey cloud grows a beautiful silver lining.
