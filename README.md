@@ -21,10 +21,11 @@ FEATURES:
 
 COMING SOON:
 
-* Search for awesome new spots based on your location (city coordinates will be stored using GeoJSON)
-* Search for awesome new spots based on your favorite kind of food
-* Search for awesome new spots based on their happy hour time
-* Search for awesome new spots based on two or more of the above parameters
+* Search for awesome new spots based on one or more of the following:
+    * your location (city coordinates will be stored using GeoJSON)
+    * your favorite kind of food
+    * their happy hour time
+    * two or more of the above parameters
 * Voice your opinion using the upvote or downvote buttons for a specific restaurant
 * Users can leave fun anecdotes/stores of things that have happened at their favorite spots
 * Newly-created restaurants will be tied to their creator, and edit/delete permissions for that restaurant page will be restricted to that user only
