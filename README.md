@@ -34,7 +34,8 @@ TECHNOLOGIES USED:
 * MongoDB
 * Mongoose
 
-Some challehges I faced during the coding process:
+Some challenges I faced during the coding process:
 
+* I had a lot of traveling/family events over the past week, was sometimes difficult to make time to work on the app
 * I have no idea why my mobile view is for ants
 * Adding images appears to ignore styling rules for those images, will fix later

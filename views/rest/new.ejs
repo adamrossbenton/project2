@@ -4,7 +4,7 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <h1>Add New Restaurant:</h1>
-    <form action="/restaurants" method="POST">
+    <form class="new" id="form" action="/restaurants" method="POST">
         <input type="text" name="restName" placeholder="Name"><br>
         <input type="text" name="restCity" placeholder="City"><br>
         <input type="text" name="restCuisine" placeholder="Cuisine"><br>
@@ -14,5 +14,6 @@
         <input type="text" name="restImgUrl" placeholder="Link an image?"><br>
         <input type="submit" value="submit">
     </form>
+    <a href="/restaurants"><button>Cancel</button></a>
 </body>
 </html>

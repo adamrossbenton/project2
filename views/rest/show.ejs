@@ -4,6 +4,7 @@
 <body>
     <%- include("../partials/header.ejs") %>
     <div class="show" id="top-container">
+    <div class="show" id="body-container">
         <div class="show" id="title-city-hours">
             <div class="show" id="rest-name-city">
                 <h3><%= rest.restName %> </h3>
@@ -27,16 +28,19 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="show" id="creator">
             <h3>Created by: </h3>
             <div class="show" id="votes">
                 Vote (up arrow)(down arrow)
             </div>
         </div>
-        <a href="/restaurants/<%= rest._id %>/edit"><button>Edit</button></a>
-        <form action="/restaurants/<%= rest._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Remove">
-        </form>
-        <a href="/restaurants"><button>Back to Main</button></a>
+        <div class="show" id="buttons">
+            <a href="/restaurants/<%= rest._id %>/edit"><button>Edit</button></a>
+            <form action="/restaurants/<%= rest._id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Remove">
+            </form>
+            <a href="/restaurants"><button>Back to Main</button></a>    
+        </div>
     </div> 
 </body>
