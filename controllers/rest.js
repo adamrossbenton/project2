@@ -66,9 +66,16 @@ router.post("/", (req,res) => {
 // Edit
 router.get("/:id/edit", (req,res) => {
     const id = req.params.id
-    Rest.findById(id, (err,rest) => {
-        res.render("rest/edit.ejs", {rest, loggedIn: req.session.loggedIn})
-    })
+    if (req.session.loggedIn) {
+        Rest.findById(id, (err,rest) => {
+            res.render("rest/edit.ejs", {rest, loggedIn: req.session.loggedIn})
+        })
+    } else {
+        res.redirect("/user/login")
+    }
+    // Rest.findById(id, (err,rest) => {
+    //     res.render("rest/edit.ejs", {rest, loggedIn: req.session.loggedIn})
+    // })
 })
 
 // Show
