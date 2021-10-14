@@ -11,6 +11,8 @@ And then your coworker invites you to this cool new place for drinks that they f
 
 HALFPRICE is an app designed to find you the tastiest and cheapest ways to ward off the creeping dread of your corporate overlords overtaking your livelihood. It is a community-sourced repository of all of the best happy hour spots in your area and beyond. With just a fraction of the meaningless clicks you've performed throughout the day at your soulless office job, you can find a spot near you that serves one (or more) of your favorite kinds of food, specially priced for people coming off of a grueling day sitting behind a desk doing 2 hours of work over a span of 9 hours.
 
+![Alt text](screenshot.png?raw=true "Screenshot")
+
 Authorized users submit their favorite happy hour spots (via our super handy submissions page) to our database, and these results appear in a cultivated list just for you. And, well, everyone else in your general area.
 
 FEATURES:
